@@ -1,7 +1,10 @@
 
 
+  // https://github.com/Forhad9/assignment-3
 
-// (01)
+
+
+//................ (01)kilometerToMeter..........//
 
 function kilometerToMeter(kilo) {
     if (kilo < 0) {
@@ -14,72 +17,69 @@ function kilometerToMeter(kilo) {
 }
 
 
+//...............  (02)budgetCalculator........//
 
-//  (02)
+function budgetCalculator(watch, phone, laptop) {
+    if (watch, phone, laptop < 0) {
+        return 'Product items should be positive value';
+    }
 
-
-
-
-
-
-
-
-
-
-
-
-
+    else {
+        var watch = watch * 50;
+        var phone = phone * 100;
+        var laptop = laptop * 500;
+        var totalAmount = watch + phone + laptop;
+    }
 
 
-
-
+    return totalAmount;
+}
 
 
 
+//.................. (03)HotelCost...........//
 
+function hotelCost(hotelReservationDay) {
+    var totalCost = 0;
+    if (hotelReservationDay <= 10) {
+        totalCost = hotelReservationDay * 100;                //Because as per day reserve cost 100tk first 1-10 days
+    }
+    else if (hotelReservationDay <= 20) {
+        var fristTenDays = 10 * 100;
+        var remainingResevationDay = hotelReservationDay - 10;
+        var secondTenDays = remainingResevationDay * 80;      // between 11-20 days hotel cost specify 80tk per days
+        totalCost = fristTenDays + secondTenDays;
 
-
-    // (03)
-
-  function hotelCost(hotelReservation){
-      var totalCost = 0;
-      if(hotelReservation <= 10){
-          totalCost = hotelReservation * 100;                //(Because as per day reserve cost 100tk first 1-10 days)
-      }
-      else if(hotelReservation <= 20){
-          var fristTenDays = 10 * 100;
-          var remainingResevation = hotelReservation - 10;
-          var secondTenDays = remainingResevation * 80;      // (between 11-20 days hotel cost specify 80tk per days)
-          totalCost = fristTenDays + secondTenDays;
-
-      }
-      else{
+    }
+    else {
         var fristTenDays = 10 * 100;
         var secondTenDays = 10 * 80;
-        var remainingResevation = hotelReservation - 20;
-        var thirdTenDays = remainingResevation * 50;       //(Per day cost 50TK after 21--up to)
+        var remainingResevationDay = hotelReservationDay - 20;
+        var furtherDays = remainingResevationDay * 50;         // 21-up to days hotel cost 50TK
 
-        totalCost = fristTenDays + secondTenDays + thirdTenDays;
-          
-      }
-      return totalCost;
-  }
+        totalCost = fristTenDays + secondTenDays + furtherDays;
+
+    }
+    return totalCost;
+}
 
 
 
-    // (04)
+
+//.......... (04)Megafriend..........//
 
 var friendList = ["Rony hawladar", "Anil khan", "Tapos", "Sornali sornaa", "Oisi", "Niloy"];
 
 function megaFriend(friendList) {
-    var maxLength = 0;
+    var largestCharacter = 0;
 
     for (var i = 0; i < friendList.length; i++) {
-        if (friendList[i].length > maxLength) {
-            var maxLength = friendList[i].length;
+        if (friendList[i].length > largestCharacter) {
+            var largestCharacter = friendList[i].length;
             var largestCharacterName = friendList[i];
 
         }
     }
     return largestCharacterName;
 }
+
